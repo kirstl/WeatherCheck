@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<h1>Weather App Home Page</h1>
+<ul>
+    <th:block th:each="weatherCondition : ${weather}">
+        <li th:text="${weatherCondition}"></li>
+
+    </th:block>
+</ul>
+<form action='add' method='post'>
+    <input type ='text' name='name'/>
+    <input type='submit' value='Add!'/>
+    </form>
+</body>
+</html>
